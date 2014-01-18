@@ -12,22 +12,36 @@
         <spring.version>4.0.0.RELEASE</spring.version>
         <jackson2.version>2.3.0</jackson2.version>
         <qdox.version>2.0-M1</qdox.version>
+        <slf4j.version>1.7.5</slf4j.version>
     </properties>
     <dependencies>
+        <!-- Slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
         <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-        
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        
+
         <!-- Qdox -->
         <dependency>
             <groupId>com.thoughtworks.qdox</groupId>
@@ -41,7 +55,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson2.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
